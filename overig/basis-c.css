@@ -1,0 +1,258 @@
+body {
+    color: #555;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.3;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poiret One', cursive;
+}
+
+header {
+    background-color: #ded2b2;
+    background-image: url(../afbeeldingen/engel.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding: 6em 0.5em 0.2em 0.5em;
+    text-align: right;
+}
+
+header a {
+    text-decoration: none;
+    color: #4d4a33;
+}
+
+nav {
+    background-color: #f7f5ed;
+}
+
+nav p.menuknop  {
+    position: absolute;
+    top: 4px;
+    right: 12px;
+    font-family: courier, monospace;
+    font-size: 28px;
+    line-height: 1;
+    margin: 0;
+}
+
+nav ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-top: 1px solid #c0b889;
+    padding: .7em .4em .6em .4em;
+}
+
+nav a {
+    color: #4d4a33;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: rgb(234, 231, 214);
+}
+
+nav ul li.submenu {
+    position: relative;
+}
+
+nav ul li.submenu > a:after {
+    content: " \025BE";
+}
+
+nav ul li.submenu:hover ul {
+    box-sizing: border-box;
+    background-color:  rgb(234, 231, 214);
+    display: block;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+}
+
+nav li li {
+    border-top: 1px solid #d1c998;
+}
+
+nav li li:first-child {
+    border-top: none;
+}
+
+nav li li a:hover {
+    color: #827c51;
+}
+
+nav > ul > li:last-child {
+    border-bottom: 1px solid #c0b889;
+}
+
+article {
+    background-color: #f7f5ed;
+    padding: 1em;
+}
+
+article h1 {
+}
+
+article h2 {
+    margin-top: 1.5em;
+}
+
+aside {
+    background-color: #eadbb4;
+    padding: 1em 1em 2em 1em;
+    text-align: center;
+}
+
+footer {
+    background-color: #4d4a33;
+    color: white;
+    font-size: .9em;
+    padding: 2em;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+img.rechts, img.links {
+    box-sizing: border-box;
+    display: block;
+    margin: 0.5em auto;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 550px) {
+    header {
+        padding: 7.5em 0.5em .1em 0.5em;
+        text-align: center;       
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+    nav p.menuknop {
+        display: none;
+    }
+    
+    nav > ul {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        border-bottom: 1px solid #c0b889;
+    }
+
+    nav ul li.submenu:hover ul {
+        width: 8em;
+        left: 0;
+        top: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border-top: 1px solid #c0b889;
+    }
+
+    nav > ul > li {
+        border-top: none;
+    }
+    
+    nav > ul > li:last-child {
+        border-bottom: none;
+    }
+    
+    
+    img.rechts {
+        float: right;
+        margin: 0.4em 0 0.4em .8em;
+    }
+
+    img.links {
+        float: left;
+        margin: 0.4em .8em 0.4em 0;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+     body {
+        background-color: #4d4a33;
+    }
+    div.websitevak {
+        width: 96%;
+        max-width: 1024px;
+        margin: 20px auto;
+        border-radius: 20px; 
+        box-shadow: 0 0 40px #f7f5ed;
+    }
+    header {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+       nav > ul {
+        border-top: 1px solid #c0b889;
+    }
+    .art-aside {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    aside {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 18%;
+        flex: 0 0 18%;
+        font-size: .9em;
+        background-color: #f7f5ed;
+    }
+    footer {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top: 1px solid #c0b889;
+        background-color: #f7f5ed;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    
+    footer p {
+        margin: 0 1em; 
+    }
+    
+    footer p, footer a {
+            color: #4d4a33;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    header h1 {
+        font-size: 3.5em;
+    }
+    
+    aside {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 22%;
+        flex: 0 0 22%;
+
+    }
+
+}

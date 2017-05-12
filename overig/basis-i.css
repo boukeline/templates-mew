@@ -1,0 +1,266 @@
+body {
+    color: #222;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.3;
+}
+
+h1, h2, h3, h4, nav {
+    font-family: 'Orbitron', sans-serif;
+}
+
+header {
+    background-color: #208193;
+    background-image: url(../afbeeldingen/textuur.jpg);
+    background-size: cover;
+    padding: 1.5em 0.5em;
+}
+
+header h1 {
+    font-size: 2.2em;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #5af1b8;
+    font-size: .85em;
+}
+
+nav p.menuknop  {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-family: courier, monospace;
+    font-size: 28px;
+    line-height: 1;
+    margin: 0;
+}
+
+nav p.menuknop a {
+    color: white;
+}
+
+nav ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-top: 1px solid white;
+    padding: .8em .4em .6em .4em;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: #32cdb8;
+}
+
+nav ul li.submenu {
+    position: relative;
+}
+
+nav ul li.submenu > a:after {
+    content: " \025BE";
+}
+
+nav ul li.submenu:hover ul {
+    box-sizing: border-box;
+    background-color: #32cdb8;
+    display: block;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+}
+
+nav li li:first-child {
+    border-top: none;
+}
+
+nav li li a:hover {
+    color: #2e02aa;
+}
+
+article {
+    padding: 1em;
+}
+
+article h1 {
+    color: #386087;
+}
+
+article h2 {
+    color: #208193;
+    margin-top: 1.5em;
+}
+
+aside h3, aside h4 {
+        color: #02165a;
+}
+
+aside {
+    background-color: #5af1b8;
+    padding: 0 0 1em 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #208193;
+    color: white;
+    font-size: .95em;
+    padding: 2em;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+img.rechts, img.links {
+    box-sizing: border-box;
+    display: block;
+    margin: 0.5em auto;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+    header {
+        padding: 2.5em 0.5em;
+        text-align: center;
+    }
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    nav p.menuknop {
+        display: none;
+    }
+    
+    nav > ul {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    nav ul li {
+        padding: 1.4em .4em 1.2em .4em;
+    }
+    nav ul li.submenu:hover ul {
+        width: 8em;
+        left: 0;
+        top: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border-top: 1px solid white;
+    }
+
+    nav > ul > li {
+        border-top: none;
+    }
+
+    aside {
+        background-color: transparent;
+    }
+    
+    img.rechts {
+        float: right;
+        margin: 0.4em 0 0.4em .8em;
+    }
+
+    img.links {
+        float: left;
+        margin: 0.4em .8em 0.4em 0;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    .art-aside {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    aside {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        font-size: .9em;
+    }
+    footer {
+        background-color: #208193;
+        background-image: url(../afbeeldingen/textuur.jpg);
+        background-size: cover;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    footer p {
+        margin: 0 .8em;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        padding: 3.5em 0.5em;
+    }
+    header h1 {
+        font-size: 4.2em;
+    }
+    .nav-aa {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 .5em;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+     }
+     nav {
+         margin-top: 1.8em;
+         -webkit-box-flex: 0;
+         -ms-flex: 0 0 16%;
+         flex: 0 0 16%;
+     }
+     nav ul {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+         flex-direction: column;
+     }
+     nav ul li {
+         border-top: 1px solid white;
+     }
+     nav ul li:last-child {
+         border-bottom: 1px solid white;
+     }
+     nav ul li.submenu:hover ul {
+        margin-left: 100%;
+        top: -1px;
+         width: 12em;
+    }
+ }

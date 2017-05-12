@@ -1,0 +1,238 @@
+body {
+    background-color: #eedab0;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.3;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Audiowide', cursive;
+    color: #281c0c;
+}
+
+header {
+    background-color: #705739;
+    background-image: url(../afbeeldingen/stenen.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+    padding: .5em 1em;
+    text-align: left;
+}
+
+header h1 {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    text-shadow: 1px 0 4px #ad8c5f;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+nav p.menuknop  {
+    font-family: courier, monospace;
+    font-size: 28px;
+    line-height: 1;
+    margin: 0;
+    padding: .2em;
+    text-align: right;
+}
+
+nav ul {
+    background-color: rgba(34, 34, 34, 0.72);
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    z-index: 2;
+}
+
+nav ul li {
+    border-top: 1px solid #bca890;
+    padding: .7em .4em .6em .4em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: rgba(91, 71, 46, 0.7);
+}
+
+nav ul li.submenu {
+    position: relative;
+}
+
+nav ul li.submenu > a:after {
+    content: " \025BE";
+}
+
+nav ul li.submenu:hover ul {
+    box-sizing: border-box;
+    background-color: rgba(91, 71, 46, 0.7);
+    display: block;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 4;
+}
+
+nav li li:first-child {
+    border-top: none;
+}
+
+nav li li a:hover {
+    color: lightgrey;
+}
+
+article {
+    padding: 1em;
+}
+
+article h2 {
+    margin-top: 1.5em;
+}
+
+aside {
+    background-color: rgb(140, 113, 92);
+    padding: 1em 1em 2em 1em;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(28, 20, 10);
+    color: white;
+    font-size: .9em;
+    padding: 2em;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+img.rechts, img.links {
+    box-sizing: border-box;
+    display: block;
+    margin: 0.5em auto;
+    max-width: 100%;
+}
+
+
+@media screen and (min-width: 500px) {
+    nav p.menuknop {
+        display: none;
+    }
+    
+    nav > ul {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    nav ul li.submenu:hover ul {
+        width: 8em;
+        left: 0;
+        top: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border-top: 1px solid #bca890;
+    }
+
+    nav > ul > li {
+        border-top: none;
+    }
+
+    nav ul li {
+         padding: 1em .4em .9em .4em;
+    }
+    
+    img.rechts {
+        float: right;
+        margin: 0.4em 0 0.4em .8em;
+    }
+
+    img.links {
+        float: left;
+        margin: 0.4em .8em 0.4em 0;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+
+}
+
+@media screen and (min-width: 768px) {
+    header h1 {
+        font-size: 3em; 
+    }
+    article {
+        padding: 1em 2em;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+  
+    header h1 {
+        font-size: 3.5em;
+    }
+    nav > ul {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    nav > ul > li {
+        margin-right: 1em;
+    }
+    .art-aside {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    aside {
+        background-color: transparent;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        font-size: .9em;
+    }
+    footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    footer p {
+        padding: 1em;
+    }
+}
